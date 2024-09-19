@@ -1,0 +1,136 @@
+.footer {
+	.container {
+		padding-top: clamp(25px, 6vw, 40px);
+		padding-bottom: 25px;
+	}
+
+	a {
+		@media (hover: hover) {
+			&:hover {
+				color: var(--c-hover-first);
+			}
+		}
+	}
+
+	&__logo {
+		margin: 0 auto;
+		width: min(397px, 100%);
+
+		@include respond-to(tablet) {
+			width: clamp(204px, 52vw, 397px);
+		}
+	}
+
+	&__middle {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 25px;
+		padding-right: 65px;
+		gap: 40px;
+
+		@include respond-to(laptop-xl) {
+			flex-direction: column-reverse;
+			align-items: center;
+			margin-top: clamp(35px, 7vw, 40px);
+			padding-right: unset;
+		}
+
+		@include respond-to(tablet) {
+			gap: 50px;
+		}
+	}
+
+	&__nav {
+		&-first,
+		&-second {
+			display: flex;
+
+			li {
+				padding: clamp(12px, 3vw, 20px) 17px;
+			}
+
+			@include respond-to(laptop-xl) {
+				justify-content: center;
+			}
+
+			@include respond-to(laptop) {
+				flex-direction: column;
+			}
+		}
+		&-first {
+			@include respond-to(tablet) {
+				color: var(--c-second);
+			}
+		}
+
+		&-hidden {
+			display: none;
+			color: var(--c-second);
+
+			@include respond-to(tablet) {
+				display: block;
+			}
+		}
+
+		@include respond-to(laptop) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		font-size: 0;
+		gap: 24px;
+
+		img {
+			width: 32px;
+			height: 32px;
+		}
+
+		a {
+			@media (hover: hover) {
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+
+		@include respond-to(tablet) {
+			justify-content: center;
+		}
+	}
+
+	&__place,
+	&__phones,
+	&__email {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+		gap: 8px;
+
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&__phones {
+		align-items: start;
+
+		li + li {
+			margin-top: 4px;
+		}
+	}
+
+	&__copyright {
+		margin-top: 45px;
+		text-align: center;
+
+		@include respond-to(tablet) {
+			margin-top: 80px;
+		}
+	}
+}

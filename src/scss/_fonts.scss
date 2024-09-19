@@ -1,0 +1,57 @@
+html {
+	font-family: "Mulish", sans-serif;
+	font-size: 16px;
+	color: var(--c-first);
+	cursor: default;
+}
+
+body {
+	line-height: 1.5;
+}
+
+h1,
+.h1 {
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 1.13;
+}
+
+h2,
+.h2 {
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 1.15;
+}
+
+h3,
+.h3 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 1.17;
+}
+
+h4,
+.h4 {
+	font-weight: 900;
+	font-size: clamp(24px, 5vw, 40px);
+	line-height: 1.2;
+}
+
+h5,
+.h5 {
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 1.34;
+}
+
+h6,
+.h6 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+strong,
+b {
+	font-weight: 700;
+}

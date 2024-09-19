@@ -1,0 +1,15 @@
+.btn {
+	padding: 12px 16px;
+	white-space: nowrap;
+
+	&--first {
+		border-radius: var(--b-radius-third);
+		color: var(--c-white);
+		background: var(--c-third);
+		@media (hover: hover) {
+			&:hover {
+				background: var(--c-hover-second);
+			}
+		}
+	}
+}

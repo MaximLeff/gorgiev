@@ -1,0 +1,77 @@
+// $name - имя шрифтового семейства;
+// $file - имя файла;
+// $weight - жирность шрифта (по-умолчанию установлено значение 400, но если мы передадим параметр, то значение по-умолчанию будет проигнорировано)
+// $style - стиль начертания (тоже установлен по-умолчанию normal)
+
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: "#{$name}";
+		src: local("#{$file}"), url("../fonts/#{$file}.woff2") format("woff2"),
+			url("../fonts/#{$file}.woff") format("woff");
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+@include font-face("Mulish", "Mulish-Black", 900);
+@include font-face("Mulish", "Mulish-Bold", 700);
+@include font-face("Mulish", "Mulish-Medium", 500);
+@include font-face("Mulish", "Mulish-Regular", 400);
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	color: var(--c-second);
+}
+
+section ul,
+section ol {
+	li {
+		+ li {
+			margin-top: 8px;
+		}
+	}
+}
+
+p {
+	+ p {
+		margin-top: 10px;
+	}
+}
+
+header,
+footer,
+section {
+	.container {
+		border-radius: var(--b-radius-first);
+	}
+}
+.footer,
+.bg {
+	&--first {
+		.container {
+			background: var(--bg-first);
+		}
+	}
+	&--second {
+		.container {
+			background: var(--bg-second);
+		}
+	}
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
