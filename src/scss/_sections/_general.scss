@@ -6,12 +6,26 @@
 		padding-bottom: 40px;
 		width: clamp(162px, 36vw, 330px);
 
+		&.general__logo--mobile {
+			display: none;
+			margin: 0 auto;
+			padding-bottom: 24px;
+			width: clamp(162px, 36vw, 330px);
+			height: max-content;
+
+			@include respond-to(laptop) {
+				display: block;
+			}
+		}
+
 		@include respond-to(laptop) {
-			position: absolute;
-			left: 50%;
-			top: 24px;
-			transform: translateX(-50%);
-			padding-bottom: unset;
+			display: none;
+
+			// position: absolute;
+			// left: 50%;
+			// top: 24px;
+			// transform: translateX(-50%);
+			// padding-bottom: unset;
 		}
 	}
 
@@ -51,7 +65,7 @@
 	.row {
 		@include respond-to(laptop) {
 			flex-direction: column-reverse;
-			padding-top: clamp(68px, 13vw, 84px);
+			padding: 16px 0;
 			gap: 24px;
 		}
 	}

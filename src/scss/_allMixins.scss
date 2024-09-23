@@ -5,9 +5,11 @@
 
 @mixin font-face($name, $file, $weight: 400, $style: normal) {
 	@font-face {
-		font-family: "#{$name}";
-		src: local("#{$file}"), url("../fonts/#{$file}.woff2") format("woff2"),
+		src:
+			local("#{$file}"),
+			url("../fonts/#{$file}.woff2") format("woff2"),
 			url("../fonts/#{$file}.woff") format("woff");
+		font-family: "#{$name}";
 		font-weight: $weight;
 		font-style: $style;
 		font-display: swap;
@@ -19,19 +21,23 @@
 @include font-face("Mulish", "Mulish-Medium", 500);
 @include font-face("Mulish", "Mulish-Regular", 400);
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	color: var(--c-second);
+.bg {
+	color: var(--c-first);
+
+	h1,
+	.h1,
+	h2,
+	.h2,
+	h3,
+	.h3,
+	h4,
+	.h4,
+	h5,
+	.h5,
+	h6,
+	.h6 {
+		color: var(--c-second);
+	}
 }
 
 section ul,
@@ -49,6 +55,17 @@ p {
 	}
 }
 
+input {
+	border: 1px solid var(--c-fourth);
+	border-radius: 2px;
+	padding: 13px 16px;
+	font-family: "Mulish", sans-serif;
+	font-size: 16px;
+	width: 100%;
+}
+button {
+	cursor: pointer;
+}
 header,
 footer,
 section {
@@ -56,6 +73,24 @@ section {
 		border-radius: var(--b-radius-first);
 	}
 }
+
+section {
+	color: var(--c-white);
+	&:first-child {
+		--gap: 24px;
+
+		margin-top: calc(var(--offset-header) + var(--gap));
+
+		@include respond-to(tablet) {
+			--gap: 16px;
+		}
+	}
+}
+
+.no-scroll {
+	overflow-y: hidden;
+}
+
 .footer,
 .bg {
 	&--first {
@@ -63,6 +98,7 @@ section {
 			background: var(--bg-first);
 		}
 	}
+
 	&--second {
 		.container {
 			background: var(--bg-second);

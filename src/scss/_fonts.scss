@@ -16,12 +16,12 @@ h1,
 	line-height: 1.13;
 }
 
-h2,
-.h2 {
+h2 {
 	font-weight: 700;
 	font-size: 56px;
 	line-height: 1.15;
 }
+
 
 h3,
 .h3 {
@@ -30,8 +30,7 @@ h3,
 	line-height: 1.17;
 }
 
-h4,
-.h4 {
+h4 {
 	font-weight: 900;
 	font-size: clamp(24px, 5vw, 40px);
 	line-height: 1.2;
@@ -54,4 +53,20 @@ h6,
 strong,
 b {
 	font-weight: 700;
+}
+
+.title{
+	&--second {
+		font-size: clamp(48px, 8vw, 64px);
+		line-height: 1.17;
+		font-weight: 900;
+		@include respond-to(tablet) {
+			font-weight: 700;
+		}
+	}
+	&--third {
+		font-weight: 900;
+		font-size: clamp(24px, 5vw, 40px);
+		line-height: 1.2;
+	}
 }

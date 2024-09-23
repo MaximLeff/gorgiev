@@ -7,15 +7,22 @@
 	--c-first: #47576C;
 	--c-second: #171F29;
 	--c-third: #192D47;
+	--c-fourth: #A3ABB5;
+	--c-fifth: #989899;
 
 	--c-white: #fff;
 
 	--c-hover-first: #171F29;
 	--c-hover-second: #304259;
+	--c-hover-third: #192D470D;
 
 	--b-radius-first: 12px;
 	--b-radius-second: 8px;
 	--b-radius-third: 4px;
+
+	--shadow-first: 0px 8px 24px 0px #02031CCC;
+
+	--anim-offset: 2px;
 
 	--anim4: 0.4s ease-in-out;
 	--anim2: 0.2s ease-in-out;
@@ -24,7 +31,8 @@
 
 $laptop-xl: 1600px;
 $laptop: 1280px;
-$tablet: 768px;
+$tablet-m: 769px;
+$tablet: 820px;
 $mobile: 425px;
 
 @mixin respond-to($media) {

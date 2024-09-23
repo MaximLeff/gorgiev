@@ -17,6 +17,8 @@ footer {
 }
 
 html {
+	overflow-x: hidden;
+	margin-right: calc(-1 * (100vw - 100% - 1px));
 	padding: clamp(16px, 4vw, 32px);
 	height: 100%;
 	background: var(--bg-main);

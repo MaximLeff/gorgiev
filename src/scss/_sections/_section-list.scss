@@ -1,0 +1,80 @@
+.section-list {
+	&__title {
+		margin-bottom: clamp(40px, 4vw, 64px);
+	}
+	.container {
+		padding-bottom: 40px;
+	}
+
+	.row {
+		gap: clamp(40px, -280px + 25vw, 120px);
+
+		@include respond-to(laptop) {
+			gap: clamp(20px, -15.6522px + 4.3478vw, 40px);
+		}
+		@include respond-to(tablet) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__img {
+		img {
+			width: clamp(43px, 25.1739px + 2.1739vw, 53px);
+			height: clamp(43px, 25.1739px + 2.1739vw, 53px);
+			@include respond-to(tablet) {
+				width: 64px;
+				height: 64px;
+			}
+		}
+	}
+
+	&__image-main {
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: min(530px, 40vw);
+			max-height: min(590px, 40vw);
+			@include respond-to(tablet) {
+				max-width: 400px;
+				max-height: 400px;
+			}
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: clamp(24px, 3vw, 40px);
+		@include respond-to(tablet) {
+			gap: 40px;
+		}
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		gap: clamp(20px, 2vw, 40px);
+
+		@include respond-to(tablet) {
+			flex-direction: column;
+			text-align: center;
+			max-width: 400px;
+			gap: 24px;
+		}
+	}
+
+	&__content {
+		&-main {
+			flex: 1;
+		}
+
+		&-title {
+			margin-bottom: 16px;
+			font-weight: 900;
+			font-size: clamp(16px, 4vw, 24px);
+			line-height: 1.3;
+			color: var(--c-second);
+		}
+	}
+}

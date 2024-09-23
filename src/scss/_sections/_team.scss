@@ -1,0 +1,64 @@
+.team {
+	.swiper-button-wrapper {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		gap: clamp(16px, 4vw, 40px);
+	}
+
+	.swiper-slide {
+		height: unset;
+	}
+
+	.container {
+		padding-top: 56px;
+		padding-right: unset;
+		padding-bottom: 56px;
+		padding-left: unset;
+	}
+
+	&__title {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: clamp(16px, 4vw, 40px);
+		gap: 24px;
+	}
+
+	.btn--second {
+		margin: 40px auto 0;
+	}
+
+	&__slide {
+		border-radius: var(--b-radius-first);
+		padding: 24px;
+		color: var(--c-first);
+		background: var(--c-white);
+
+		img {
+			margin-bottom: min(24px, 1vw);
+			height: min(552px, 28vw);
+			object-fit: cover;
+
+			@include respond-to(tablet) {
+				height: 324px;
+			}
+		}
+
+		&-title {
+			margin-bottom: 8px;
+			font-weight: 900;
+			font-size: min(24px, 2vw);
+			color: var(--c-second);
+
+			@include respond-to(tablet) {
+				font-size: max(18px, 3.1vw);
+			}
+
+			@include respond-to(mobile) {
+				font-size: 24px;
+			}
+		}
+	}
+}

@@ -2,14 +2,113 @@
 	padding: 12px 16px;
 	white-space: nowrap;
 
+	&-slider {
+		width: clamp(24px, 6vw, 38px);
+		height: clamp(24px, 6vw, 38px);
+		font-size: 0;
+		cursor: pointer;
+
+		svg {
+			width: clamp(24px, 6vw, 38px);
+			height: clamp(24px, 6vw, 38px);
+		}
+
+		&--first {
+			@media (hover: hover) {
+				&:hover {
+					path {
+						fill: var(--c-first);
+					}
+
+					rect {
+						stroke: var(--c-first);
+					}
+				}
+			}
+		}
+
+		&--second {
+			path {
+				fill: var(--c-fifth);
+			}
+
+			rect {
+				stroke: var(--c-fifth);
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					path {
+						fill: var(--c-second);
+					}
+
+					rect {
+						stroke: var(--c-second);
+					}
+				}
+			}
+		}
+	}
+
 	&--first {
 		border-radius: var(--b-radius-third);
 		color: var(--c-white);
 		background: var(--c-third);
+
 		@media (hover: hover) {
 			&:hover {
 				background: var(--c-hover-second);
 			}
 		}
+	}
+
+	&--second {
+		padding: 12px 16px;
+		border: 1px solid var(--c-white);
+		display: block;
+		width: max-content;
+		border-radius: var(--b-radius-third);
+		@media (hover: hover) {
+			&:hover {
+				color: var(--c-fifth);
+				border-color: var(--c-fifth);
+			}
+		}
+	}
+
+	&--dropdown {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		i {
+			width: 10px;
+			height: 10px;
+			background: center / contain no-repeat url("../img/icons/arrow--dropdown.svg");
+			transition: var(--anim2);
+		}
+	}
+}
+
+.swiper-pagination {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-top: 24px;
+	gap: 16px;
+
+	&-bullet {
+		border-radius: 100%;
+		width: 16px;
+		height: 16px;
+		background: var(--c-fourth);
+
+		&-active {
+			background: var(--c-white);
+		}
+	}
+
+	@include respond-to(tablet) {
+		display: flex;
 	}
 }

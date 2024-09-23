@@ -9,7 +9,7 @@
 // @import "_plugins/_jquery.scrollbar";
 // @import "_plugins/_magnific-popup";
 // @import "_plugins/_select2";
-// @import "_plugins/_swiper";
+@import "_plugins/_swiper";
 
 // End plugins ------------------------------------
 
@@ -24,4 +24,6 @@
 @import "_doc_section/_header";
 @import "_doc_section/_footer";
 @import "_sections/_general";
-@import "_sections/_leave-feadback";
+@import "_sections/_leave-feedback";
+@import "_sections/_section-list";
+@import "_sections/_team";
