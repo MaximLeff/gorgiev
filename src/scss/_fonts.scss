@@ -9,8 +9,7 @@ body {
 	line-height: 1.5;
 }
 
-h1,
-.h1 {
+h1 {
 	font-weight: 900;
 	font-size: 64px;
 	line-height: 1.13;
@@ -22,9 +21,7 @@ h2 {
 	line-height: 1.15;
 }
 
-
-h3,
-.h3 {
+h3 {
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 1.17;
@@ -36,15 +33,13 @@ h4 {
 	line-height: 1.2;
 }
 
-h5,
-.h5 {
+h5 {
 	font-weight: 900;
 	font-size: 24px;
 	line-height: 1.34;
 }
 
-h6,
-.h6 {
+h6 {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.5;
@@ -55,18 +50,167 @@ b {
 	font-weight: 700;
 }
 
-.title{
-	&--second {
-		font-size: clamp(48px, 8vw, 64px);
-		line-height: 1.17;
+.title {
+	&--first {
 		font-weight: 900;
+		font-size: clamp(56px, 6vw, 80px);
+		line-height: 1.1;
+
 		@include respond-to(tablet) {
 			font-weight: 700;
 		}
 	}
+
+	&--second {
+		font-weight: 900;
+		font-size: clamp(48px, 8vw, 64px);
+		line-height: 1.17;
+
+		@include respond-to(tablet) {
+			font-weight: 700;
+		}
+	}
+
 	&--third {
 		font-weight: 900;
 		font-size: clamp(24px, 5vw, 40px);
 		line-height: 1.2;
+	}
+
+	&--fourth {
+		font-weight: 900;
+		font-size: clamp(24px, 7vw, 64px);
+		line-height: 1.2;
+	}
+
+	&--sixth {
+		font-weight: 700;
+		font-size: clamp(16px, 4vw, 24px);
+	}
+}
+
+.article-page {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: clamp(16px, 4vw, 24px);
+		color: var(--c-third);
+
+		ol,
+		ul {
+			margin-top: 64px;
+		}
+	}
+
+	img {
+		max-height: 800px;
+	}
+
+	.alignleft {
+		float: left;
+		padding: 24px 24px 24px 0;
+		max-width: 400px;
+	}
+
+	.alignright {
+		float: right;
+		padding: 24px 0 24px 24px;
+		max-width: 400px;
+	}
+
+	.aligncenter {
+		display: block;
+		margin: 24px 0;
+		text-align: center;
+	}
+
+	.alignnone {
+		padding: 24px 0;
+	}
+	img {
+		padding: clamp(40px, 2vw, 64px) 0;
+	}
+	.alignleft,
+	.alignright,
+	.alignnone {
+		max-width: clamp(350px, 28vw, 400px);
+
+		@include respond-to(tablet) {
+			max-width: 100%;
+			margin: 0 auto;
+			width: 100%;
+			padding: 40px 0;
+		}
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	ul {
+		list-style: disc;
+	}
+
+	ol {
+		list-style: auto;
+	}
+
+	ul,
+	ol {
+		max-width: 80%;
+		padding: 24px;
+		@include respond-to(tablet) {
+			max-width: 100%;
+		}
+
+		li:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5 {
+			margin-top: 20px;
+		}
+	}
+
+	p {
+		font-weight: 700;
+		text-align: justify;
+
+		@include respond-to(tablet) {
+			font-weight: 400;
+		}
+
+		& + p {
+			margin-top: clamp(8px, 2vw, 24px);
+		}
+
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6 {
+			margin-top: clamp(24px, 4vw, 64px);
+		}
+	}
+
+	a {
+		text-decoration: underline;
+
+		@media (hover: hover) {
+			&:hover {
+				color: var(--c-hover-first);
+			}
+		}
 	}
 }

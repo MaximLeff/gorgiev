@@ -1,6 +1,12 @@
 .btn {
+	display: block;
+	border: unset;
+	border-radius: var(--b-radius-third);
 	padding: 12px 16px;
+	width: max-content;
+	font-family: "Mulish", sans-serif;
 	white-space: nowrap;
+	cursor: pointer;
 
 	&-slider {
 		width: clamp(24px, 6vw, 38px);
@@ -51,7 +57,6 @@
 	}
 
 	&--first {
-		border-radius: var(--b-radius-third);
 		color: var(--c-white);
 		background: var(--c-third);
 
@@ -63,17 +68,40 @@
 	}
 
 	&--second {
-		padding: 12px 16px;
 		border: 1px solid var(--c-white);
-		display: block;
-		width: max-content;
-		border-radius: var(--b-radius-third);
+
 		@media (hover: hover) {
 			&:hover {
-				color: var(--c-fifth);
 				border-color: var(--c-fifth);
+				color: var(--c-fifth);
 			}
 		}
+	}
+
+	&--third {
+		color: var(--c-third);
+		background: var(--c-white);
+
+		@media (hover: hover) {
+			&:hover {
+				color: var(--c-hover-second);
+			}
+		}
+	}
+
+	&--fourth {
+		@media (hover: hover) {
+			&:hover {
+				rect {
+					fill: var(--c-hover-second);
+				}
+			}
+		}
+	}
+
+	&--fifth {
+		border: 1px solid var(--c-third);
+		color: var(--c-third);
 	}
 
 	&--dropdown {
@@ -102,9 +130,18 @@
 		width: 16px;
 		height: 16px;
 		background: var(--c-fourth);
+		cursor: pointer;
 
 		&-active {
 			background: var(--c-white);
+		}
+	}
+
+	&--second {
+		.swiper-pagination-bullet {
+			&-active {
+				background: var(--c-third);
+			}
 		}
 	}
 

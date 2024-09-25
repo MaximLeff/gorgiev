@@ -1,0 +1,65 @@
+.our-personal {
+	padding-bottom: clamp(16px, 4vw, 56px);
+
+	&-list {
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 0 clamp(16px, 4vw, 40px);
+			gap: 40px 24px;
+
+			@include respond-to(tablet) {
+				gap: 24px;
+			}
+		}
+
+		.team {
+			&__slide {
+				width: calc(100% / 3 - ((24px / 3) * 2));
+				transition: var(--anim2);
+
+				img {
+					display: block;
+				}
+
+				&-title {
+					@include respond-to(tablet) {
+						margin-top: 20px;
+					}
+				}
+
+				&-tags {
+					display: flex;
+					flex-wrap: wrap;
+					padding: 24px 0 0;
+					line-height: 1.5;
+					gap: 16px;
+
+					li {
+						list-style: none;
+						margin-top: unset;
+						border: 1px solid var(--c-third);
+						border-radius: 100px;
+						padding: 8px 14px;
+						color: var(--c-third);
+					}
+				}
+
+				@include respond-to(laptop) {
+					width: calc(100% / 2 - ((24px / 2) * 2));
+				}
+
+				@include respond-to(tablet) {
+					padding: 16px;
+					width: 100%;
+				}
+
+				@media (hover: hover) {
+					&:hover {
+						box-shadow: var(--shadow-hover-first);
+					}
+				}
+			}
+		}
+	}
+}

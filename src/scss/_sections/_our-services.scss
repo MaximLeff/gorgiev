@@ -1,0 +1,38 @@
+.our-services {
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: clamp(16px, 4vw, 40px);
+
+		.btn {
+			@include respond-to(tablet) {
+				display: none;
+			}
+		}
+	}
+
+	.container {
+		padding-top: 56px;
+		padding-right: unset;
+		padding-bottom: 56px;
+		padding-left: unset;
+	}
+
+	.btn--mobile {
+		display: none;
+
+		@include respond-to(tablet) {
+			display: block;
+			margin-top: 24px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&--second {
+		.container {
+			padding-bottom: unset;
+		}
+	}
+}

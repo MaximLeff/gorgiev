@@ -1,6 +1,10 @@
 .general {
 	position: relative;
 
+	&__title {
+		margin-bottom: clamp(24px, 2vw, 40px);
+	}
+
 	&__logo {
 		margin-bottom: auto;
 		padding-bottom: 40px;
@@ -20,12 +24,6 @@
 
 		@include respond-to(laptop) {
 			display: none;
-
-			// position: absolute;
-			// left: 50%;
-			// top: 24px;
-			// transform: translateX(-50%);
-			// padding-bottom: unset;
 		}
 	}
 
@@ -56,6 +54,9 @@
 	&__name {
 		margin-top: clamp(24px, 5vw, 40px);
 		margin-bottom: 8px;
+		font-weight: 900;
+		font-size: 24px;
+		color: var(--c-second);
 	}
 
 	&__position {
@@ -67,6 +68,45 @@
 			flex-direction: column-reverse;
 			padding: 16px 0;
 			gap: 24px;
+		}
+	}
+
+	&--second {
+		.btn {
+			margin-top: clamp(24px, 2vw, 40px);
+			@include respond-to(laptop) {
+				margin: clamp(24px, 2vw, 40px) auto 0;
+			}
+			@include respond-to(mobile) {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.general {
+			&__title {
+				&--mobile {
+					display: none;
+
+					@include respond-to(laptop) {
+						display: block;
+					}
+				}
+			}
+
+			&__text {
+				.general__title {
+					@include respond-to(laptop) {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.row {
+			@include respond-to(laptop) {
+				padding: unset;
+			}
 		}
 	}
 }

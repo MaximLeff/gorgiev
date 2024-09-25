@@ -1,0 +1,71 @@
+.standards {
+	&__tabs {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		padding: unset;
+
+		li {
+			list-style: none;
+			margin: unset;
+			border-bottom: 1px solid transparent;
+			padding: 8px;
+			width: calc(100% / var(--count) - 10px);
+			line-height: 1;
+			text-align: center;
+			cursor: pointer;
+
+			@media (hover: hover) {
+				&:hover {
+					font-weight: 700;
+				}
+			}
+
+			span {
+				@include respond-to(laptop) {
+					display: block;
+					margin: 0 auto;
+					max-width: 150px;
+					text-align: center;
+				}
+			}
+
+			&.active {
+				border-color: var(--c-third);
+				font-weight: 700;
+				color: var(--c-third);
+			}
+		}
+
+		@include respond-to(tablet) {
+			display: none;
+		}
+	}
+
+	&__slide {
+		display: flex;
+		align-items: center;
+		gap: 24px 80px;
+
+		&-title {
+			margin-bottom: 24px;
+			font-weight: 900;
+			color: var(--c-second);
+		}
+
+		img {
+			margin-bottom: auto;
+			border-radius: var(--b-radius-second);
+			width: min(850px, 50%);
+
+			@include respond-to(laptop) {
+				width: 100%;
+				max-width: 700px;
+			}
+		}
+
+		@include respond-to(laptop) {
+			flex-direction: column;
+		}
+	}
+}

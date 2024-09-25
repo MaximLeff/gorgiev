@@ -1,0 +1,26 @@
+.prices {
+	&__title {
+		margin-bottom: clamp(24px, 4vw, 64px);
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: var(--b-radius-third);
+		padding: 8px 16px;
+		gap: 30px;
+
+		span:last-child {
+			font-weight: 900;
+			font-size: clamp(24px, 5vw, 40px);
+			line-height: 1.2;
+			white-space: nowrap;
+			color: var(--c-second);
+		}
+
+		&:nth-child(even) {
+			background: #192d470d;
+		}
+	}
+}

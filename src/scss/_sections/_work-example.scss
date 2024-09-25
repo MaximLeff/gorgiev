@@ -1,0 +1,70 @@
+.work-example {
+	&__slide {
+		display: flex;
+		align-items: end;
+		gap: 24px 64px;
+
+		img {
+			margin-bottom: auto;
+			border-radius: var(--b-radius-second);
+			width: min(850px, 56%);
+
+			@include respond-to(laptop) {
+				width: 100%;
+				max-width: 700px;
+			}
+		}
+
+		&__content {
+			width: 44%;
+		}
+
+		&-title {
+			margin-bottom: clamp(16px, 2vw, 24px);
+			font-weight: 900;
+			font-size: clamp(16px, 4vw, 24px);
+
+			@include respond-to(tablet) {
+				font-weight: 700;
+			}
+		}
+
+		@include respond-to(laptop) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.swiper-pagination {
+		display: flex;
+		margin-top: clamp(24px, 4vw, 40px);
+	}
+
+	.swiper-button-next {
+		right: 0;
+	}
+
+	&__slides {
+		margin-right: 78px;
+		margin-left: 78px;
+
+		&-wrap {
+			position: relative;
+
+			.btn-slider {
+				position: absolute;
+				top: calc(50% - 40px);
+				transform: translateY(-50%);
+
+				@include respond-to(tablet) {
+					display: none;
+				}
+			}
+		}
+
+		@include respond-to(laptop) {
+			margin-right: unset;
+			margin-left: unset;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+.certificates {
+	.swiper {
+		margin-right: 78px;
+		margin-left: 78px;
+
+		&-pagination {
+			display: flex;
+			margin-top: clamp(24px, 4vw, 40px);
+		}
+
+		&-slide {
+			font-size: 0;
+
+			img {
+				object-fit: cover;
+
+				@include respond-to(tablet) {
+					height: 544px;
+				}
+			}
+		}
+
+		&-button {
+			&-prev {
+				left: 0;
+			}
+
+			&-next {
+				right: 0;
+			}
+		}
+
+		@include respond-to(tablet) {
+			margin-right: unset;
+			margin-left: unset;
+		}
+	}
+
+	&__slider {
+		position: relative;
+
+		.btn-slider {
+			position: absolute;
+			top: calc(50% - 40px);
+			z-index: 10;
+			transform: translateY(-50%);
+
+			@include respond-to(tablet) {
+				display: none;
+			}
+		}
+	}
+
+	.title-slide-buttons {
+		gap: 16px;
+	}
+}

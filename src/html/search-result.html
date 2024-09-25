@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_parts/_head.html')
+
+<body>
+	@@include('_parts/_header.html')
+
+	<main>
+		<section class="search-result bg bg--first section--first">
+			<div class="container">
+				<div class="search-result__title title title--fourth">Результати за запитом “lorem ipsum”</div>
+				<div class="search-result__subtitle">Знайдено 16 результатів</div>
+			</div>
+		</section>
+
+		<section class="search-item bg bg--second">
+			<div class="container">
+				<div class="search-item__wrapper">
+					<div class="search-item__title title">Lorem ipsum dolor sit amet consectetur</div>
+					<p>Lorem ipsum dolor sit amet consectetur. Nunc vivamus viverra pulvinar dignissim elit id a scelerisque. Nunc tristique convallis purus eget. Nunc arcu elementum a amet viverra bibendum integer. Lorem ipsum dolor sit amet consectetur. Nunc vivamus viverra pulvinar dignissim elit id a scelerisque. Nunc tristique convallis purus eget. Nunc arcu elementum a amet viverra bibendum integer.</p>
+				</div>
+				<div class="search-item__btn btn--fourth">
+					@@include('_components/_icon-more.html')
+				</div>
+			</div>
+		</section>
+		
+		<section class="search-item bg bg--second">
+			<div class="container">
+				<div class="search-item__wrapper">
+					<div class="search-item__title title">Lorem ipsum dolor sit amet consectetur</div>
+					<p>Lorem ipsum dolor sit amet consectetur. Nunc vivamus viverra pulvinar dignissim elit id a scelerisque. Nunc tristique convallis purus eget. Nunc arcu elementum a amet viverra bibendum integer. Lorem ipsum dolor sit amet consectetur. Nunc vivamus viverra pulvinar dignissim elit id a scelerisque. Nunc tristique convallis purus eget. Nunc arcu elementum a amet viverra bibendum integer.</p>
+				</div>
+				<div class="search-item__btn btn--fourth">
+					@@include('_components/_icon-more.html')
+				</div>
+			</div>
+		</section>
+
+		<section class="search-item bg bg--second">
+			<div class="container">
+				<div class="search-item__wrapper">
+					<div class="search-item__title title">Lorem ipsum dolor sit amet consectetur</div>
+					<p>Lorem ipsum dolor sit amet consectetur. Nunc vivamus viverra pulvinar dignissim elit id a scelerisque. Nunc tristique convallis purus eget. Nunc arcu elementum a amet viverra bibendum integer. Lorem ipsum dolor sit amet consectetur. Nunc vivamus viverra pulvinar dignissim elit id a scelerisque. Nunc tristique convallis purus eget. Nunc arcu elementum a amet viverra bibendum integer.</p>
+				</div>
+				<div class="search-item__btn btn--fourth">
+					@@include('_components/_icon-more.html')
+				</div>
+			</div>
+		</section>
+
+		<section class="pagination-wrapper">
+			<div class="container">
+				<div class="pagination">
+					<div class="pagination__btn pagination__btn--prev">
+						<svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.5 9L4.5 5L0.5 1" stroke="white" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="pagination__btn pagination__btn--current">1</div>
+					<div class="pagination__btn">2</div>
+					<div class="pagination__btn">...</div>
+					<div class="pagination__btn">6</div>
+					<div class="pagination__btn pagination__btn--next">
+						<svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.5 9L4.5 5L0.5 1" stroke="white" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	@@include('_parts/_footer.html')
+</body>
+
+</html>
